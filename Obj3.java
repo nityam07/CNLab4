@@ -1,11 +1,17 @@
 package Objective;
 
 import java.net.*;
+import java.util.Scanner;
+
+//ipVersionCheck
 
 public class Obj3 {
     public static void main(String[] args) {
-        try {
-            InetAddress address = InetAddress.getByName("2409:4089:1e91:3722:871:e41f:d2e2:5b45");
+    	 System.out.print("Enter the IP: ");
+         Scanner sc = new Scanner(System.in);
+         String name = sc.nextLine();
+    	try {
+            InetAddress address = InetAddress.getByName(name);
             if (address instanceof Inet6Address) {
                 System.out.println("IPv6");
             } else if (address instanceof Inet4Address) {
